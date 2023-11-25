@@ -2,9 +2,9 @@ let mongoose = require('mongoose');
 
 // create a model class
 let profModel = mongoose.Schema({
-        FullName:String,
-        Program:String,
-        Email:String,
+        Name:String,
+        Priority:String,
+        Notes:String,
     },
     {
         collection:"prof-list"

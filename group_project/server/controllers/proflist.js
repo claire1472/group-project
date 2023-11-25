@@ -39,9 +39,9 @@ module.exports.Addprof = async (req,res,next)=>{
 module.exports.Processprof = async (req,res,next)=>{
     try{
         let newprof = prof({
-            "FullName":req.body.FullName,
-            "Program": req.body.Program,
-            "Email": req.body.Email,
+            "Name":req.body.Name,
+            "Priority": req.body.Priority,
+            "Notes": req.body.Notes,
 
         });
         prof.create(newprof).then(() =>{
@@ -81,9 +81,9 @@ module.exports.ProcessEditprof= (req,res,next)=>{
         const id = req.params.id;
         let updatedprof = prof({
             "_id":id,
-            "FullName":req.body.FullName,
-            "Program": req.body.Program,
-            "Email": req.body.Email,
+            "Name":req.body.Name,
+            "Priority": req.body.Priority,
+            "Notes": req.body.Notes,
 
 
         });
